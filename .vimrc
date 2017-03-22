@@ -1,6 +1,7 @@
 set nocompatible
 filetype plugin indent on
 
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " allow backspacing over everything in insert mode
