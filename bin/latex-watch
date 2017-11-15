@@ -7,8 +7,7 @@ fi
 
 while true
 do
-    inotifywait -e modify "$1"
-    if [ $? -eq 1 ]
+    if inotifywait -e modify -e move_self "$1"
     then
         pdflatex -halt-on-error "$1"
     else
